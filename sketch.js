@@ -14,14 +14,14 @@ var ground;
 
 function setup() {
     // Setup the canvas, the ground the, tanker, the shooting ball and the bubble balls.
-    var canvas = createCanvas(600,600);
+     createCanvas(600,600);
 
     background(80,80,80);
 
     engine = Engine.create();
     world = engine.world;
 
-    ground = new Ground(200,375,400,50);
+    ground = new Ground(300,575,600,50);
     ground.shapeColor = "green";
 }
 
