@@ -12,12 +12,13 @@ class Ground{
     }
 
     display(){
+        var pos = this.body.position;
         //var angle = this.body.angle;
         push();
         //translate(this.body.position.x,this.body.position.y);
         rectMode(CENTER);
         //rotate(angle);
-        rect(this.body,x,y,400,20);
+        rect(pos.x,pos.y,this.width,this.height);
         pop();
     }
 }

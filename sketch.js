@@ -10,7 +10,7 @@ is the same as c
 onst Engine = Matter.Engine
 
 */
-var ground;
+var ground,tanker1;
 
 function setup() {
     // Setup the canvas, the ground the, tanker, the shooting ball and the bubble balls.
@@ -23,11 +23,15 @@ function setup() {
 
     ground = new Ground(300,575,600,50);
     ground.shapeColor = "green";
+    tanker1 = new Tanker(100,500,70,100);
 }
 
 function draw() {
 // Remember to update the Matter Engine and set the background.
+    background(80,80,80);
+    Engine.update(engine);
     ground.display();
+    tanker1.display();
 }
 
 
