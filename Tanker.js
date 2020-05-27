@@ -3,7 +3,8 @@ class Tanker {
       var options = {
       isStatic: true
      }
-     this.body = Bodies.rectangle(x,y,width,height,options);
+     this.image = loadImage("assets/tank-cartoon-004.png");
+     this.body = Bodies.rectangle(x,y,width,height,options)
      this.width = width;
      this.height = height;
      World.add(world,this.body)
@@ -17,9 +18,9 @@ class Tanker {
         //var angle = this.body.angle;
         push();
         //translate(this.body.position.x,this.body.position.y);
-        rectMode(CENTER);
+        imageMode(CENTER);
         //rotate(angle);
-        rect(pos.x,pos.y,this.width,this.height);
+        image(this.image,pos.x,pos.y,this.width,this.height);
         pop();
     };
 }

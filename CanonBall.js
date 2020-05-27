@@ -6,9 +6,16 @@ class CanonBall {
       "restitution" : 0.8,
       "frictionAir":0.06
     }
+    this.image = loadImage("assets/cannonball.png");
+    this.body = Bodies.rectangle(x,y,options);
   };
 
   display(){
-
+    var angle = this.angle.body;
+    pop();
+    translate(this.body.position.x,this.body.position.y);
+    rotate(angle);
+    imageMode(CENTER);
+    image(this.image,this.body.position.x,this.body.position.y);
   };
 };

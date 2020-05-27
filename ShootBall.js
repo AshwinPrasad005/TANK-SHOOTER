@@ -6,13 +6,24 @@ class ShootBall{
             stiffness: 0.04,
             length: 10
         }
+        
+        this.body = Constraint.create(options);
 
     }
 
-    attach(body){}
+    attach(body){
+        this.image.body = body
+    }
 
-    shoot(){}
+    shoot(){
+        this.image.body = null;
+    }
 
-    display(){}
+    display(){
+        pop();
+        push();
+
+    }
 
 }
+                  
