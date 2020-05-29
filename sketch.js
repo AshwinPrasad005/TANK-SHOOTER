@@ -34,9 +34,13 @@ function draw() {
     ground.display();
     tanker1.display();
     cannonball1.display();
+    keyReleased();
 }
 
 
 function keyReleased() {
     // Call the shoot method for the cannon.
+    if(keyCode == 32){
+        shoot(cannonball1);
+    }
 }

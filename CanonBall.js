@@ -1,4 +1,4 @@
-class CanonBall {
+class CannonBall {
   constructor(x, y) {
     var options = {
       "density" :   1.5,
@@ -11,10 +11,10 @@ class CanonBall {
   };
 
   display(){
-    var angle = this.angle.body;
+    
     pop();
-    translate(this.body.position.x,this.body.position.y);
-    rotate(angle);
+    //translate(this.body.position.x,this.body.position.y);
+    //rotate(angle);
     imageMode(CENTER);
     image(this.image,this.body.position.x,this.body.position.y);
   };

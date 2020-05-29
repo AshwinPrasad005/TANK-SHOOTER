@@ -15,7 +15,7 @@ class ShootBall{
         this.image.body = body
     }
 
-    shoot(){
+    shoot(image){
         this.image.body = null;
     }
 
