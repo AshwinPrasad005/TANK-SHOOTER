@@ -16,11 +16,12 @@ class Tanker {
       // You could also use an image if you want a specific look
       var pos = this.body.position;
         //var angle = this.body.angle;
-        push();
+        
         //translate(this.body.position.x,this.body.position.y);
         imageMode(CENTER);
         //rotate(angle);
         image(this.image,pos.x,pos.y,this.width,this.height);
-        pop();
+        //pop();
+        push();
     };
 }

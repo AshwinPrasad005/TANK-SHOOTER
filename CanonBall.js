@@ -12,7 +12,7 @@ class CannonBall {
 
   display(){
     
-    pop();
+    //pop();
     //translate(this.body.position.x,this.body.position.y);
     //rotate(angle);
     imageMode(CENTER);

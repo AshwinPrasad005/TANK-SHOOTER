@@ -41,6 +41,6 @@ function draw() {
 function keyReleased() {
     // Call the shoot method for the cannon.
     if(keyCode == 32){
-        shoot(cannonball1);
+        cannonball1.shoot();
     }
 }
