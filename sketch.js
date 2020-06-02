@@ -24,7 +24,7 @@ function setup() {
     ground = new Ground(300,575,600,50);
     ground.shapeColor = "green";
     tanker1 = new Tanker(100,500,70,100);
-    cannonball1 = new CannonBall(100,500);
+    cannonball1 = new CannonBall(100,500,1);
 }
 
 function draw() {
@@ -34,13 +34,13 @@ function draw() {
     ground.display();
     tanker1.display();
     cannonball1.display();
-    keyReleased();
+    //keyReleased();
 }
 
 
-function keyReleased() {
+function keyPressed() {
     // Call the shoot method for the cannon.
-    if(keyCode == 32){
+    if(keyPressed == 32){
         cannonball1.shoot();
     }
 }
