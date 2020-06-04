@@ -34,7 +34,7 @@ function draw() {
     ground.display();
     tanker1.display();
     cannonball1.display();
-    //keyReleased();
+    keyPressed();
 }
 
 
@@ -42,5 +42,6 @@ function keyPressed() {
     // Call the shoot method for the cannon.
     if(keyPressed == 32){
         cannonball1.shoot();
+        console.log("shoot")
     }
 }
