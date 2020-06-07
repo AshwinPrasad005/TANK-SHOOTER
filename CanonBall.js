@@ -6,7 +6,7 @@ class CannonBall {
       "restitution" : 0.8,
       "frictionAir":0.06
     }
-    this.image = loadImage("assets/canonball.png");
+    this.image = loadImage("canonball.png");
     this.body = Bodies.circle(x,y,radius,options);
     World.add(world,this.body);
   };

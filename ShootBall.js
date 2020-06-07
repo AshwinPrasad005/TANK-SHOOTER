@@ -7,23 +7,23 @@ class ShootBall{
             length: 10
         }
         
-        this.body = Constraint.create(options);
+        this.body = Constraints.create(options);
+        World.add(world,this.body)
 
     }
 
     attach(body){
-        this.image.body = body
+        this.body.position = body
     }
 
-    shoot(image){
-        this.image.body = null;
+    shoot(){
+        this.body.position = null;
     }
-
     display(){
-        pop();
-        push();
-
+        if(this.sling.bodyA){
+            var bodyA = this.sling.bodyA.position;
+            var pointB = this.pointB;
+        }
     }
 
 }
-                  

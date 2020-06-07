@@ -3,7 +3,7 @@ class Tanker {
       var options = {
       isStatic: true
      }
-     this.image = loadImage("assets/tank-cartoon-004.png");
+     this.image = loadImage("tank-cartoon-004.png");
      this.body = Bodies.rectangle(x,y,width,height,options)
      this.width = width;
      this.height = height;
