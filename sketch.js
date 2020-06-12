@@ -23,8 +23,8 @@ function setup() {
 
     ground = new Ground(300,575,600,50);
     ground.shapeColor = "green";
-    tanker1 = new Tanker(100,500);
-    cannonball1 = new CannonBall(100,100,1);
+    tanker1 = new Tanker(100,525,50,50);
+    cannonball1 = new CannonBall(100,425,10,10);
     shhotball1 = new ShootBall(tanker1,cannonball1);
 }
 
@@ -43,7 +43,8 @@ function draw() {
 function keyPressed() {
     // Call the shoot method for the cannon.
     if(keyPressed === "space"){
-        shhotball1.shoot();
+         shhotball1.shoot(cannonball1);
+        //cannonball1.velocityX = 5;
         console.log("shoot");
     }
     if(keyPressed === "UP_ARROW"){

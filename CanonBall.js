@@ -1,5 +1,5 @@
 class CannonBall {
-  constructor(x, y,radius) {
+  constructor(x, y,width,height) {
     var options = {
       "density" :   1.5,
       "friction" : 1.0,
@@ -7,17 +7,17 @@ class CannonBall {
       "frictionAir":0.06
     }
     this.image = loadImage("canonball.png");
-    this.body = Bodies.circle(x,y,radius,options);
+    this.body = Bodies.rectangle(x,y,width,height,options);
+    this.width = width;
+    this.height = height;
     World.add(world,this.body);
   };
 
   display(){
-    
-    //pop();
-    //translate(this.body.position.x,this.body.position.y);
-    //rotate(angle);
+    pop();
+    var pos = this.body.position;
     imageMode(CENTER);
-    image(this.image,this.body.position.x,this.body.position.y,this.radius);
+    image(this.image,pos.x,pos.y,this.width,this.height);
     push();
   };
 };

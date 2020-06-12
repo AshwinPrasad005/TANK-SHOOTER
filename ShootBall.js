@@ -15,15 +15,13 @@ class ShootBall{
         this.body.position = body
     }
 
-    shoot(){
-        this.body.position = null;
+    shoot(bodyB1){
+        this.bodyB1.position = null;
     }
     display(){
-        // if(this.sling.bodyA){
-        //     var bodyA = this.sling.bodyA.position;
-        //     var pointB = this.pointB;
-        //}
-        strokeWeight(3);
+        // strokeWeight(3);
+        // fill("black");
+        // line(this.sling.bodyA.position.x,this.sling.bodyA.position.y,this.sling.bodyB.position.x,this.sling.bodyB.position.y);
     }
 
 }
