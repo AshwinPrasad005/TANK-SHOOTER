@@ -1,13 +1,12 @@
 class ShootBall{
-    constructor(bodyA, pointB){
+    constructor(bodyA1, bodyB1){
         var options = {
-            bodyA: bodyA,
-            pointB: pointB,
+            bodyA: bodyA1.body,
+            pointB: bodyB1.body,
             stiffness: 0.04,
             length: 10
         }
-        
-        this.body = Constraints.create(options);
+        this.body = Constraint.create(options);
         World.add(world,this.body)
 
     }
@@ -20,10 +19,11 @@ class ShootBall{
         this.body.position = null;
     }
     display(){
-        if(this.sling.bodyA){
-            var bodyA = this.sling.bodyA.position;
-            var pointB = this.pointB;
-        }
+        // if(this.sling.bodyA){
+        //     var bodyA = this.sling.bodyA.position;
+        //     var pointB = this.pointB;
+        //}
+        strokeWeight(3);
     }
 
 }

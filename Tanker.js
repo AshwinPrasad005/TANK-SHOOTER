@@ -1,12 +1,12 @@
 class Tanker {
-  constructor(x, y, width, height) {
+  constructor(x, y) {
       var options = {
       isStatic: true
      }
      this.image = loadImage("tank-cartoon-004.png");
-     this.body = Bodies.rectangle(x,y,width,height,options)
-     this.width = width;
-     this.height = height;
+     this.body = Bodies.rectangle(x,y,options)
+     //this.width = width;
+     //this.height = height;
      World.add(world,this.body)
 
     };
@@ -16,7 +16,7 @@ class Tanker {
       // You could also use an image if you want a specific look
       var pos = this.body.position;
         //var angle = this.body.angle;
-        
+        pop();
         //translate(this.body.position.x,this.body.position.y);
         imageMode(CENTER);
         //rotate(angle);

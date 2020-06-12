@@ -1,6 +1,6 @@
 // You could have multiple flags like: start, launch to indicate the state of the game.
 
-const { Engine, World, Bodies, Body, Mouse, MouseConstraint, Constraints, Composite, Detector } = Matter;
+const { Engine, World, Bodies, Body, Mouse, MouseConstraint, Constraint, Composite, Detector } = Matter;
 // The above line creates different constant variables for Engine, World, Bodies etc.
 
 /*
@@ -23,8 +23,8 @@ function setup() {
 
     ground = new Ground(300,575,600,50);
     ground.shapeColor = "green";
-    tanker1 = new Tanker(100,500,70,100);
-    cannonball1 = new CannonBall(100,500,1);
+    tanker1 = new Tanker(100,500);
+    cannonball1 = new CannonBall(100,100,1);
     shhotball1 = new ShootBall(tanker1,cannonball1);
 }
 
@@ -44,9 +44,9 @@ function keyPressed() {
     // Call the shoot method for the cannon.
     if(keyPressed === "space"){
         shhotball1.shoot();
-        console.log("shoot")
+        console.log("shoot");
     }
-    if(keyDown === "UP_ARROW"){
-
+    if(keyPressed === "UP_ARROW"){
+        shhotball1.attach(tanker1.body);
     }
 }
