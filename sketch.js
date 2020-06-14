@@ -42,12 +42,13 @@ function draw() {
 
 function keyPressed() {
     // Call the shoot method for the cannon.
-    if(keyPressed === "space"){
-         shhotball1.shoot(cannonball1);
+    if(keyCode === 32){
+        //shhotball1.shoot(cannonball1);
         //cannonball1.velocityX = 5;
+        
         console.log("shoot");
     }
-    if(keyPressed === "UP_ARROW"){
+    if(keyCode === "UP_ARROW"){
         shhotball1.attach(tanker1.body);
     }
 }

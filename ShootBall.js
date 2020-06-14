@@ -15,8 +15,8 @@ class ShootBall{
         this.body.position = body
     }
 
-    shoot(bodyB1){
-        this.bodyB1.position = null;
+    shoot(body){
+        this.body.position = null;
     }
     display(){
         // strokeWeight(3);
