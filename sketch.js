@@ -24,7 +24,7 @@ function setup() {
     ground = new Ground(300,575,600,50);
     ground.shapeColor = "green";
     tanker1 = new Tanker(100,525,50,50);
-    cannonball1 = new CannonBall(100,425,10,10);
+    cannonball1 = new CannonBall(100,425,20,20);
     shhotball1 = new ShootBall(tanker1,cannonball1);
 }
 
@@ -36,19 +36,21 @@ function draw() {
     tanker1.display();
     cannonball1.display();
     shhotball1.display();
-    keyPressed();
+    //keyPressed();
 }
 
 
-function keyPressed() {
+function mouseDragged() {
     // Call the shoot method for the cannon.
-    if(keyCode === 32){
-        shhotball1.shoot(cannonball1);
-        cannonball1.velocityX = 5;
-        console.log("shoot");
-    }
-    if(keyCode === 38){
-        shhotball1.attach(tanker1.body);
-        console.log("attach")
+    Matter.Body.setPosition(cannonball1.body, {x: mouseX , y: mouseY});
+}
+
+function mouseReleased(){
+  shhotball1.shoot();
+}
+
+function keyPressed(){
+    if(keyPressed === "UP_ARROW"){
+        shhotball1.attach(cannonball1.body)
     }
 }

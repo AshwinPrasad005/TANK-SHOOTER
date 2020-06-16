@@ -7,7 +7,7 @@ class ShootBall{
             length: 10
         }
         this.body = Constraint.create(options);
-        World.add(world,this.body)
+        World.add(world,this.body);
 
     }
 
@@ -15,13 +15,13 @@ class ShootBall{
         this.body.position = body
     }
 
-    shoot(body){
+    shoot(){
         this.body.position = null;
     }
     display(){
-        // strokeWeight(3);
-        // fill("black");
-        // line(this.sling.bodyA.position.x,this.sling.bodyA.position.y,this.sling.bodyB.position.x,this.sling.bodyB.position.y);
+         strokeWeight(3);
+         fill("black");
+         line(this.sling.bodyA.position.x,this.sling.bodyA.position.y,this.sling.bodyB.position.x,this.sling.bodyB.position.y);
     }
 
 }
