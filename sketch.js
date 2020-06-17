@@ -25,7 +25,7 @@ function setup() {
     ground.shapeColor = "green";
     tanker1 = new Tanker(100,525,50,50);
     cannonball1 = new CannonBall(100,425,20,20);
-    shhotball1 = new ShootBall(tanker1,cannonball1);
+    shhotball1 = new ShootBall(cannonball1.body,{x:100,y:525});
 }
 
 function draw() {
@@ -50,7 +50,9 @@ function mouseReleased(){
 }
 
 function keyPressed(){
-    if(keyPressed === "UP_ARROW"){
+    if(keyCode === 32){
         shhotball1.attach(cannonball1.body)
+        cannonball1.position.x = 75;
+        cannonball1.position.y = 400
     }
 }

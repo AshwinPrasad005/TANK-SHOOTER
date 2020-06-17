@@ -1,27 +1,40 @@
 class ShootBall{
-    constructor(bodyA1, bodyB1){
+    constructor(bodyA, pointB){
         var options = {
-            bodyA: bodyA1.body,
-            pointB: bodyB1.body,
+            bodyA: bodyA,
+            pointB: pointB,
             stiffness: 0.04,
             length: 10
         }
-        this.body = Constraint.create(options);
-        World.add(world,this.body);
+        this.sling = Constraint.create(options);
+        this.pointB = pointB
+        World.add(world,this.sling);
 
     }
 
-    attach(body){
-        this.body.position = body
+    attach(obj1){
+        this.sling.bodyA = obj1;
     }
 
     shoot(){
-        this.body.position = null;
+        this.sling.bodyA = null;
     }
     display(){
-         strokeWeight(3);
-         fill("black");
-         line(this.sling.bodyA.position.x,this.sling.bodyA.position.y,this.sling.bodyB.position.x,this.sling.bodyB.position.y);
+        if(this.sling.bodyA){
+            var pointA = this.sling.bodyA.position;
+            var pointB = this.pointB;
+            stroke(48,22,8);
+            if(pointA.x<220){
+            strokeWeight(7);
+            line(pointA.x-20, pointA.y, pointB.x-10, pointB.y);
+            line(pointA.x-20, pointA.y, pointB.x+30, pointB.y-3);
+            }
+            else{
+                strokeWeight(4);
+                line(pointA.x+25, pointA.y, pointB.x-10, pointB.y);
+                line(this.sling.bodyA.position.x+25,this.sling.bodyA.position.y-10,15,30);
+                line(pointA.x+25, pointA.y, pointB.x-30, pointB.y-3);
+            }
+        }
     }
-
 }
