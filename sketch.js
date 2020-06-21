@@ -20,7 +20,7 @@ function setup() {
     world = engine.world;
 
     ground = new Ground(300,575,600,50);
-    ball1 = new Ball(300,300,25);
+    ball1 = new Ball(300,300,25,25);
     tanker1 = new Tanker(100,525,50,50);
     cannonball1 = new CannonBall(100,425,20,20);
     shhotball1 = new ShootBall(cannonball1.body,{x:100,y:525});
