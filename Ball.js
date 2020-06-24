@@ -8,6 +8,7 @@ class Ball {
         restitution: 1.0
     }
     this.body = Bodies.circle(x,y,radius,options);
+    this.radius = radius;
     World.add(world,this.body);
   }
   display() {

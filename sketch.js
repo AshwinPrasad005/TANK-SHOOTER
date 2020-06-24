@@ -21,6 +21,8 @@ function setup() {
 
     ground = new Ground(300,575,600,50);
     ball1 = new Ball(300,300,25,25);
+    ball2 = new Ball(350,250,25,25);
+    ball3 = new Ball(400,200,25,25);
     tanker1 = new Tanker(100,525,50,50);
     cannonball1 = new CannonBall(100,425,20,20);
     shhotball1 = new ShootBall(cannonball1.body,{x:100,y:525});
@@ -32,6 +34,8 @@ function draw() {
     Engine.update(engine);
     ground.display();
     ball1.display();
+    ball2.display();
+    ball3.display();
     tanker1.display();
     cannonball1.display();
     shhotball1.display();
