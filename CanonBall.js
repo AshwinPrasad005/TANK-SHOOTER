@@ -6,7 +6,7 @@ class CannonBall {
       "restitution" : 0.8,
       "frictionAir":0.06
     }
-    this.image = loadImage("canonball.png");
+    this.image = loadImage("canonBall.png");
     this.body = Bodies.rectangle(x,y,width,height,options);
     this.width = width;
     this.height = height;
