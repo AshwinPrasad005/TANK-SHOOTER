@@ -12,6 +12,8 @@ onst Engine = Matter.Engine
 */
 var ground,tanker1,cannonball1,shhotball1,ball1,ball2,ball3;
 
+var gameState = "onSling";
+
 function setup() {
     // Setup the canvas, the ground the, tanker, the shooting ball and the bubble balls.
      createCanvas(600,600);
@@ -23,7 +25,7 @@ function setup() {
     ball1 = new Ball(300,300,25,25);
     ball2 = new Ball(350,250,25,25);
     ball3 = new Ball(400,200,25,25);
-    tanker1 = new Tanker(100,525,50,50);
+    tanker1 = new Tanker(100,525,100,75);
     cannonball1 = new CannonBall(100,425,20,20);
     shhotball1 = new ShootBall(cannonball1.body,{x:100,y:525});
 }
@@ -40,16 +42,20 @@ function draw() {
     cannonball1.display();
     shhotball1.display();
     //keyPressed();
+    attached
 }
 
 
 function mouseDragged() {
     // Call the shoot method for the cannon.
-    Matter.Body.setPosition(cannonball1.body, {x: mouseX , y: mouseY});
+    if (gameState!=="shoot"){
+        Matter.Body.setPosition(cannonball1.body, {x: mouseX , y: mouseY});
+    }
 }
 
 function mouseReleased(){
   shhotball1.shoot();
+  gameState = "shoot";
 }
 
 function keyPressed(){
