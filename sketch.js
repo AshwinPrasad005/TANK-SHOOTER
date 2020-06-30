@@ -41,8 +41,7 @@ function draw() {
     tanker1.display();
     cannonball1.display();
     shhotball1.display();
-    //keyPressed();
-    attached
+    //keyPressed()
 }
 
 
