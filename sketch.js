@@ -62,5 +62,6 @@ function keyPressed(){
         cannonball1.x = 100;
         cannonball1.y = 425;
         shhotball1.attach(cannonball1.body);
+        gameState = "onSling";
     }
 }
