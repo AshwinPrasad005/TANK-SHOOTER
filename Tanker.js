@@ -14,12 +14,14 @@ class Tanker {
     display(){
       // Draw the tanker the way you like.
       // You could also use an image if you want a specific look
+      push();
       var pos = this.body.position;
         //var angle = this.body.angle;
         //translate(this.body.position.x,this.body.position.y);
         imageMode(CENTER);
         //rotate(angle);
         image(this.image,pos.x,pos.y,this.width,this.height);
+        pop();
         
     };
 }

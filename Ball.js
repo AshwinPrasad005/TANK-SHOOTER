@@ -12,11 +12,11 @@ class Ball {
     World.add(world,this.body);
   }
   display() {
-    pop();
+    push();
     var pos = this.body.position;
     ellipseMode(CENTER);
     fill("green");
     ellipse(pos.x,pos.y,this.radius,this.radius);
-    push();
+    pop();
   }
 }

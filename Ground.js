@@ -18,6 +18,7 @@ class Ground{
         //translate(this.body.position.x,this.body.position.y);
         rectMode(CENTER);
         //rotate(angle);
+        fill("green");
         rect(pos.x,pos.y,this.width,this.height);
         pop();
     }

@@ -14,10 +14,10 @@ class CannonBall {
   };
 
   display(){
-    pop();
+    push();
     var pos = this.body.position;
     imageMode(CENTER);
     image(this.image,pos.x,pos.y,this.width,this.height);
-    push();
+    pop();
   };
 };
